@@ -1,3 +1,6 @@
+import torch
+
+
 def gen_linspace(start, end, n):
     # first get the step size
     step_size = (end - start) / (n - 1)
@@ -16,4 +19,11 @@ def gen_linspace(start, end, n):
 
 
 if __name__ == '__main__':
-    print(gen_linspace(start=0, end=2, n=9))
+    x = torch.tensor(1.0, requires_grad=True)
+    y = x ** 2
+    y.backward()
+    print(x.data)
+    print(x.grad)
+    print(x.grad.data)
+    # print(gen_linspace(start=0, end=2, n=9))
+    # print(gen_linspace(-3, 3, 0.1))
