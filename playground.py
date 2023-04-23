@@ -22,7 +22,7 @@ if __name__ == '__main__':
     x = torch.tensor(1.0, requires_grad=True)
     y = x ** 2
     y.backward()
-    print(x.data)
+    print(x.detach())
     print(x.grad)
     print(x.grad.data)
     # print(gen_linspace(start=0, end=2, n=9))
