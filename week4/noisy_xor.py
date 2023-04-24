@@ -140,3 +140,4 @@ optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 train_loader = DataLoader(dataset=data_set, batch_size=1)
 LOSS12 = train(data_set, model, criterion, train_loader, optimizer, epochs=500)
 plot_decision_regions_2class(model, data_set)
+
